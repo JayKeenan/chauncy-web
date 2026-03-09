@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import WaitlistForm from '../components/WaitlistForm.astro';
+---
+
+<Base title="macOS Waitlist — Chauncy" description="Get notified when Chauncy is available for macOS.">
+
+  <section class="section">
+    <div class="container wl-container">
+      <h1>Mac support is coming.</h1>
+      <p class="wl-sub">
+        The macOS build of Chauncy is in active development. We're not listing a date until it's tested and ready — but when it ships, waitlist members will be notified first and launch pricing applies.
+      </p>
+
+      <WaitlistForm />
+
+      <p class="wl-fine-print">No spam. One email when macOS launches. That's it.</p>
+
+      <p class="wl-note">Chauncy is currently available for <a href="/pricing">Windows and Linux</a>.</p>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .wl-container {
+    max-width: 600px;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .wl-sub {
+    margin: 1rem 0 2.5rem;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .wl-fine-print {
+    margin-top: 0.75rem;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  .wl-note {
+    margin-top: 2rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+</style>

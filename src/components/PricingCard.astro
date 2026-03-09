@@ -1,0 +1,108 @@
+---
+interface Props {
+  name: string;
+  price: string;
+  originalPrice?: string;
+  description: string;
+  features: string[];
+  cta: string;
+  ctaHref: string;
+  highlighted?: boolean;
+}
+
+const { name, price, originalPrice, description, features, cta, ctaHref, highlighted = false } = Astro.props;
+---
+
+<div class:list={['pricing-card', { highlighted }]}>
+  {highlighted && <div class="badge">Launch Price</div>}
+  <h3>{name}</h3>
+  <div class="price">
+    <span class="amount">{price}</span>
+    {originalPrice && <span class="original">{originalPrice}</span>}
+  </div>
+  <p class="desc">{description}</p>
+  <ul>
+    {features.map(f => <li>{f}</li>)}
+  </ul>
+  <a href={ctaHref} class:list={['btn', highlighted ? 'btn-primary' : 'btn-secondary']}>{cta}</a>
+</div>
+
+<style>
+  .pricing-card {
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .pricing-card.highlighted {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 24px rgba(37, 99, 235, 0.1);
+  }
+
+  .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .original {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    text-decoration: line-through;
+  }
+
+  .desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  li::before {
+    content: '\2713\0020';
+    color: var(--color-success);
+    font-weight: 700;
+  }
+
+  li {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    text-align: center;
+    margin-top: auto;
+  }
+</style>

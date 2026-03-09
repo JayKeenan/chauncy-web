@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Chauncy FAQ" description="Frequently asked questions about Chauncy.">
+
+  <section class="section">
+    <div class="container faq-container">
+      <h1>Questions</h1>
+
+      <div class="faq-list">
+        <details>
+          <summary>What formats does Chauncy support?</summary>
+          <p>PDF, email (including IMAP mailbox sync), Markdown, Microsoft Word, PowerPoint, plain text, HTML, web URLs via the clipper, typed notes, and voice notes. If you have documents in a format not listed, contact us — we're adding formats based on demand.</p>
+        </details>
+
+        <details>
+          <summary>Does Chauncy require an internet connection?</summary>
+          <p>No. All core features — search, document ingestion, automatic connections — run entirely on your machine. An internet connection is only needed when you use an AI feature (summarization, deeper analysis), because those requests go to the API provider you've configured.</p>
+        </details>
+
+        <details>
+          <summary>Wait — Chauncy opens in my browser. Is it a web app?</summary>
+          <p>No. Chauncy is a desktop application. It uses your browser as its interface for technical reasons, but it runs entirely on your computer. No data is sent to any Chauncy server. There is no Chauncy server.</p>
+        </details>
+
+        <details>
+          <summary>Do I need an AI API key to use Chauncy?</summary>
+          <p>No. AI features are optional. Search, ingestion, and automatic document connections all work without an API key. The AI layer adds capabilities like natural language summarization when you want them.</p>
+        </details>
+
+        <details>
+          <summary>Which AI providers does Chauncy support?</summary>
+          <p>OpenAI, Anthropic, Groq, and any provider with a compatible API endpoint. If you run a local model via LM Studio or a similar tool, you can point Chauncy at it using the custom endpoint setting.</p>
+        </details>
+
+        <details>
+          <summary>Who is Chauncy for?</summary>
+          <p>Researchers, writers, analysts, consultants, and anyone managing a large personal document collection who doesn't want to spend their time organizing it. If you've ever thought "I know I saved something about this somewhere," Chauncy is for you.</p>
+        </details>
+
+        <details>
+          <summary>Who is Chauncy not for?</summary>
+          <p>Chauncy is not designed for compliance-regulated environments. If you operate under HIPAA, attorney-client privilege requirements, federal grant data handling rules, or similar regulatory frameworks, Chauncy is not the right tool. We're not built for that use case and make no claims to support it.</p>
+        </details>
+
+        <details>
+          <summary>Does Chauncy sync across devices?</summary>
+          <p>Not currently. Chauncy is a single-machine application. Your document collection lives on the machine where you installed it.</p>
+        </details>
+
+        <details>
+          <summary>Is macOS supported?</summary>
+          <p>Not at launch. macOS support is in active development. Join the waitlist at <a href="/waitlist">chauncy.dev/waitlist</a> and we'll notify you when it's ready. Launch pricing applies to waitlist customers.</p>
+        </details>
+
+        <details>
+          <summary>Where do my documents go when I add them?</summary>
+          <p>Into a local database on your machine. The full text, metadata, and vector embeddings are stored there. Nothing leaves your machine unless you use an AI feature.</p>
+        </details>
+
+        <details>
+          <summary>Can I move my Chauncy database to a different machine?</summary>
+          <p>Yes. Chauncy stores everything in a single database file you can locate in Settings. Copy it to your new machine and you're done. Documentation for migration is included.</p>
+        </details>
+
+        <details>
+          <summary>What happens if I want to stop using Chauncy?</summary>
+          <p>Your documents are yours. You can export everything and Chauncy stores nothing externally to delete.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .faq-container {
+    max-width: 720px;
+  }
+
+  .faq-container h1 {
+    margin-bottom: 2rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  details {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+
+  details[open] {
+    padding-bottom: 1.25rem;
+  }
+
+  summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.05rem;
+  }
+
+  summary::marker {
+    color: var(--color-primary);
+  }
+
+  details p {
+    margin-top: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+</style>

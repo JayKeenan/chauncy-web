@@ -1,0 +1,71 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/#features', label: 'Features' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/faq', label: 'FAQ' },
+];
+---
+
+<header class="site-header">
+  <nav class="container nav">
+    <a href="/" class="logo">Chauncy</a>
+    <ul class="nav-links">
+      {navLinks.map(link => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+      <li><a href="/pricing" class="btn btn-primary btn-sm">Get Chauncy</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    height: var(--nav-height);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .btn-sm {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 1rem;
+    }
+  }
+</style>
