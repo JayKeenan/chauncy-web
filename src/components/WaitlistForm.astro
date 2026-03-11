@@ -1,14 +1,12 @@
 ---
-// macOS waitlist signup — action URL will be wired in Step 8
+// macOS waitlist signup — can be upgraded to Formspree/Buttondown later
 ---
 
-<form class="waitlist-form" method="POST" action="#">
+<div class="waitlist-form">
   <h3>Get notified when Chauncy is available for macOS</h3>
-  <div class="form-row">
-    <input type="email" name="email" placeholder="you@example.com" required />
-    <button type="submit" class="btn btn-primary">Join Waitlist</button>
-  </div>
-</form>
+  <p class="waitlist-cta">Drop us a line and we'll email you when it ships.</p>
+  <a href="mailto:waitlist@chauncy.dev?subject=macOS%20Waitlist" class="btn btn-primary">Join Waitlist</a>
+</div>
 
 <style>
   .waitlist-form {
@@ -20,34 +18,12 @@
   }
 
   .waitlist-form h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
-  .form-row {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  input[type="email"] {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: var(--font-sans);
-  }
-
-  input[type="email"]:focus {
-    outline: 2px solid var(--color-primary);
-    border-color: transparent;
-  }
-
-  @media (max-width: 480px) {
-    .form-row {
-      flex-direction: column;
-    }
+  .waitlist-cta {
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
   }
 </style>
