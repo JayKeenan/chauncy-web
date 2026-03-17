@@ -1,11 +1,19 @@
 ---
-// macOS waitlist signup — can be upgraded to Formspree/Buttondown later
+// macOS waitlist signup — FormSubmit.co integration
+// Submissions go to waitlist@chauncy.dev
+// First submission requires one-time email verification
 ---
 
 <div class="waitlist-form">
   <h3>Get notified when Chauncy is available for macOS</h3>
-  <p class="waitlist-cta">Drop us a line and we'll email you when it ships.</p>
-  <a href="mailto:waitlist@chauncy.dev?subject=macOS%20Waitlist" class="btn btn-primary">Join Waitlist</a>
+  <p class="waitlist-subtext">Enter your email and we'll let you know when it ships.</p>
+  <form action="https://formsubmit.co/waitlist@chauncy.dev" method="POST" class="waitlist-form-fields">
+    <input type="email" name="email" placeholder="you@example.com" required />
+    <input type="hidden" name="_subject" value="macOS Waitlist Signup" />
+    <input type="hidden" name="_next" value="https://chauncy.dev/waitlist" />
+    <input type="hidden" name="_captcha" value="false" />
+    <button type="submit" class="btn btn-primary">Notify Me When macOS Is Ready</button>
+  </form>
 </div>
 
 <style>
@@ -21,9 +29,36 @@
     margin-bottom: 0.5rem;
   }
 
-  .waitlist-cta {
+  .waitlist-subtext {
     color: var(--color-text-muted);
     margin-bottom: 1.25rem;
     font-size: 0.95rem;
+  }
+
+  .waitlist-form-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .waitlist-form-fields input[type="email"] {
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: var(--color-text);
+  }
+
+  .waitlist-form-fields input[type="email"]::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .waitlist-form-fields .btn {
+    width: 100%;
   }
 </style>
