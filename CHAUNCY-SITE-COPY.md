@@ -1,9 +1,10 @@
 # Chauncy.dev — Complete Site Copy
 
-**Version:** 1.0  
-**Date:** 2026-03-05  
+**Version:** 1.1  
+**Date:** 2026-03-16  
 **For:** CC integration into Astro scaffold (Step 8)  
 **Notes:** Placeholder text marked [PLACEHOLDER]. Stripe links marked [STRIPE-LINK-89] and [STRIPE-LINK-129].
+**Changes from v1.0:** Removed free trial CTA; added Web Speech API caveat to voice notes; corrected Windows download instructions (no installer at launch); corrected file sizes (AppImage 145MB, Windows .exe 210MB); corrected database description (directory, not single file).
 
 ---
 
@@ -23,7 +24,7 @@ Chauncy connects your PDFs, emails, notes, and files — automatically — so yo
 Ask a question in plain English. Chauncy searches everything you've ever saved and surfaces what's connected — across formats, across time, without a filing system.
 
 **Primary CTA button:**
-Download for Free Trial
+Download Chauncy
 
 **Secondary CTA button:**
 See How It Works ↓
@@ -81,7 +82,7 @@ Everything you need. Nothing you don't.
 
 **Feature 3 — Every Format**
 **Title:** Drop it in. All of it.
-**Body:** PDFs, emails, Markdown, Word, PowerPoint, web clips, typed notes, voice notes. If you have it, Chauncy can work with it.
+**Body:** PDFs, emails, Markdown, Word, PowerPoint, web clips, typed notes, voice notes. If you have it, Chauncy can work with it. Voice notes require a browser with Web Speech API support (Chrome, Chromium, and Edge).
 
 **Feature 4 — Local First**
 **Title:** Your documents stay on your machine.
@@ -249,7 +250,7 @@ Not at launch. macOS support is in active development. Join the waitlist at chau
 Into a local database on your machine. The full text, metadata, and vector embeddings are stored there. Nothing leaves your machine unless you use an AI feature.
 
 **Q: Can I move my Chauncy database to a different machine?**
-Yes. Chauncy stores everything in a single database file you can locate in Settings. Copy it to your new machine and you're done. Documentation for migration is included.
+Yes. Chauncy stores everything in a database directory you can locate in Settings. Copy it to your new machine and you're done. Documentation for migration is included.
 
 **Q: What happens if I want to stop using Chauncy?**
 Your documents are yours. You can export everything and Chauncy stores nothing externally to delete.
@@ -273,13 +274,13 @@ Your receipt is on its way to your email. Here's your download.
 **Download section:**
 
 **Windows**
-Chauncy Installer for Windows (.exe, ~450MB)
+Chauncy for Windows (.exe, ~210MB)
 [Download for Windows] [PLACEHOLDER: GitHub Releases link]
 
-Requires Windows 10 or later. Run the installer and follow the prompts. Chauncy will initialize your database on first launch — this takes about 30 seconds.
+Requires Windows 10 or later. Download and run Chauncy.exe directly. No installation required. Chauncy will initialize your database on first launch — this takes about 30 seconds.
 
 **Linux**
-Chauncy AppImage for Linux (~450MB)
+Chauncy AppImage for Linux (~145MB)
 [Download for Linux AppImage] [PLACEHOLDER: GitHub Releases link]
 
 Mark the AppImage as executable and run it. No installation required.
