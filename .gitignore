@@ -5,3 +5,11 @@ dist/
 Thumbs.db
 Dividing product launch responsibilities*
 LAUNCH-PLAN (3).md
+
+# Local walkthrough screenshots and temporary launch artifacts
+/[0-9]*.png
+/Screenshot_*.png
+/*.jpg
+/*.jpeg
+/*.zip
+/preview*.log
