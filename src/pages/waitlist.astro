@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import WaitlistForm from '../components/WaitlistForm.astro';
 ---
 
-<Base title="macOS Waitlist — Chauncy" description="Get notified when Chauncy is available for macOS.">
+<Base title="macOS Waitlist - Chauncy" description="Get notified when Chauncy is available for macOS.">
 
   <section class="section">
     <div class="container wl-container">
@@ -16,7 +16,7 @@ import WaitlistForm from '../components/WaitlistForm.astro';
 
       <p class="wl-fine-print">No spam. One email when macOS launches. That's it.</p>
 
-      <p class="wl-note">Chauncy is currently available for <a href="/pricing">Windows and Linux</a>.</p>
+      <p class="wl-note">Chauncy for Windows is available on the <a href="/pricing">pricing page</a>.</p>
     </div>
   </section>
 
@@ -27,6 +27,10 @@ import WaitlistForm from '../components/WaitlistForm.astro';
     max-width: 600px;
     text-align: center;
     padding-top: 2rem;
+  }
+
+  .waitlist-form {
+    text-align: left;
   }
 
   .wl-sub {

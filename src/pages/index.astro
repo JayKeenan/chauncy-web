@@ -1,129 +1,164 @@
 ---
 import Base from '../layouts/Base.astro';
-import FeatureCard from '../components/FeatureCard.astro';
 ---
 
-<Base title="Chauncy — Automatic Knowledge Discovery for Your Documents" description="Chauncy connects your PDFs, emails, notes, and files automatically. Ask questions in plain English. Discover connections without organizing. Fully local, fully private.">
+<Base title="Chauncy - Private Knowledge Discovery for Your Documents" description="Chauncy helps writers, researchers, and analysts search, connect, and curate their own document collections locally. No account, no telemetry, no autonomous agents.">
 
-  <!-- Hero -->
   <section class="hero">
-    <div class="container hero-inner">
-      <h1>Your documents know more than you think.</h1>
-      <p class="hero-sub">
-        Chauncy connects your PDFs, emails, notes, and files — automatically — so you can stop organizing and start finding.
-      </p>
-      <p class="hero-body">
-        Ask a question in plain English. Chauncy searches everything you've ever saved and surfaces what's connected — across formats, across time, without a filing system.
-      </p>
-      <div class="hero-actions">
-        <a href="/pricing" class="btn btn-primary">Download Chauncy</a>
-        <a href="#how-it-works" class="btn btn-secondary">See How It Works ↓</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Local-first document intelligence</p>
+        <h1>Your documents know more than you think.</h1>
+        <p class="hero-sub">
+          Chauncy helps you search, connect, and curate the material you already have: PDFs, email, notes, web clips, and long-forgotten files.
+        </p>
+        <p class="hero-body">
+          Ask in plain English. Inspect the source. Follow the connections. Chauncy discovers what is related, but you decide what matters.
+        </p>
+        <div class="hero-actions">
+          <a href="/pricing" class="btn btn-primary">Buy Chauncy for Windows</a>
+          <a href="#safety" class="btn btn-secondary">See the privacy model</a>
+        </div>
+        <div class="hero-trust">
+          <span>No account</span>
+          <span>No cloud sync</span>
+          <span>No telemetry</span>
+          <span>No autonomous actions</span>
+        </div>
       </div>
-      <p class="hero-platforms">Windows &middot; Linux &middot; macOS (coming soon)</p>
+
+      <div class="product-mockup" aria-label="Chauncy interface preview">
+        <div class="mock-nav">
+          <span class="mock-tab active">Workspace</span>
+          <span class="mock-tab">Add</span>
+          <span class="mock-tab">Settings</span>
+          <span class="mock-status">Engine ready</span>
+        </div>
+        <div class="mock-query">What did I save about the Henderson contract?</div>
+        <div class="mock-body">
+          <div class="mock-results">
+            <div class="mock-card selected">
+              <div>
+                <strong>Contract notes - February review</strong>
+                <p>Mentions the renewal clause, vendor concession, and the email thread from March.</p>
+              </div>
+              <span>83%</span>
+            </div>
+            <div class="mock-card">
+              <div>
+                <strong>Email from Dana about vendor terms</strong>
+                <p>Connects pricing change to the amended service window.</p>
+              </div>
+              <span>78%</span>
+            </div>
+            <div class="mock-card">
+              <div>
+                <strong>Annotated PDF: Services Agreement</strong>
+                <p>Your note: "This is the clause to challenge if renewal timing changes."</p>
+              </div>
+              <span>74%</span>
+            </div>
+          </div>
+          <div class="mock-panel">
+            <p class="mock-panel-label">Connected material</p>
+            <h3>Chauncy surfaces evidence. You curate the argument.</h3>
+            <p>Open a source, compare related material, add your own annotation, and keep the trail attached to the document collection.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- The Problem -->
-  <section class="section-alt">
-    <div class="container problem-block">
-      <h2>You already have the knowledge. It's just scattered.</h2>
-      <p>
-        Most knowledge tools make you do the work. You link documents manually, build folder hierarchies, create tags and categories — and then hope you remember to maintain it six months from now.
-      </p>
-      <p>
-        Most people don't. Documents pile up. Connections go unmade. The information you need is in there somewhere, but "somewhere" isn't good enough.
-      </p>
-      <p>
-        Chauncy doesn't ask you to organize. It discovers connections automatically, the moment you drop a file in.
-      </p>
+  <section id="safety" class="section-alt">
+    <div class="container safety-grid">
+      <div>
+        <p class="eyebrow">Private by architecture. Safe by restraint.</p>
+        <h2>Chauncy is not a runaway agent.</h2>
+        <p>
+          It does not browse the web for you, operate accounts, send email, buy things, delete files, or chain together background actions. Chauncy is a retrieval and curation tool for your own material.
+        </p>
+      </div>
+      <div class="safety-cards">
+        <div class="safety-card">
+          <h3>Local first</h3>
+          <p>Your documents, search index, embeddings, and annotations live on your machine.</p>
+        </div>
+        <div class="safety-card">
+          <h3>Explicit AI</h3>
+          <p>AI synthesis is optional. You choose the provider, supply the key, and decide when excerpts leave your machine.</p>
+        </div>
+        <div class="safety-card">
+          <h3>Human judgment</h3>
+          <p>Chauncy can surface connections. It does not decide what is true, important, or ready to publish.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- How It Works -->
   <section id="how-it-works" class="section">
     <div class="container">
-      <h2 class="section-heading">Three steps. No setup.</h2>
-      <div class="steps-grid">
-        <div class="step">
-          <span class="step-num">1</span>
-          <h3>Drop your files in.</h3>
-          <p>PDFs, emails, Word docs, notes, web clips — Chauncy accepts all of it. No reformatting, no importing ritual.</p>
+      <div class="section-intro">
+        <p class="eyebrow">Workflow</p>
+        <h2>From scattered archive to usable evidence.</h2>
+      </div>
+      <div class="workflow-grid">
+        <div class="workflow-step">
+          <span>01</span>
+          <h3>Collect</h3>
+          <p>Bring in PDFs, email, Markdown, Word, PowerPoint, HTML, web URLs, notes, and voice notes.</p>
         </div>
-        <div class="step">
-          <span class="step-num">2</span>
-          <h3>Ask in plain English.</h3>
-          <p>"What did I save about the Henderson project?" "Emails from last month about the contract?" No query syntax. No filters. Just a question.</p>
+        <div class="workflow-step">
+          <span>02</span>
+          <h3>Ask</h3>
+          <p>Use plain English to search by meaning, not just filename, folder, or exact keyword.</p>
         </div>
-        <div class="step">
-          <span class="step-num">3</span>
-          <h3>Discover what's connected.</h3>
-          <p>Open any document and Chauncy shows you everything related to it — automatically, based on meaning, not keywords.</p>
+        <div class="workflow-step">
+          <span>03</span>
+          <h3>Inspect</h3>
+          <p>Open the source, check the surrounding context, and see related material beside it.</p>
+        </div>
+        <div class="workflow-step">
+          <span>04</span>
+          <h3>Curate</h3>
+          <p>Add your own annotations, keep the useful trail, and turn discovered material into your work.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
   <section id="features" class="section-alt">
-    <div class="container">
-      <h2 class="section-heading">Everything you need. Nothing you don't.</h2>
-      <div class="features-grid">
-        <FeatureCard
-          title="Ask, don't search."
-          description="Type a question the way you'd say it out loud. Chauncy understands meaning, not just matching words. Find things you've forgotten you had."
-        />
-        <FeatureCard
-          title="Links you didn't have to make."
-          description="Open any document and see what else in your collection relates to it. Chauncy discovers these connections using AI — no manual linking required."
-        />
-        <FeatureCard
-          title="Drop it in. All of it."
-          description="PDFs, emails, Markdown, Word, PowerPoint, web clips, typed notes, voice notes. If you have it, Chauncy can work with it. Voice notes require a browser with Web Speech API support (Chrome, Chromium, and Edge)."
-        />
-        <FeatureCard
-          title="Your documents stay on your machine."
-          description="Chauncy stores everything locally — no account, no cloud sync, no telemetry. Search and discovery run entirely offline. If you use an AI feature, relevant excerpts go to the API provider you've chosen. You control when that happens and which provider receives it."
-        />
-        <FeatureCard
-          title="One input. No learning curve."
-          description="There's no dashboard to configure, no filter panel to learn. One text field. Ask your question. Get your answer."
-        />
-        <FeatureCard
-          title="You choose the AI. You own the key."
-          description="Connect OpenAI, Anthropic, Groq, or any compatible endpoint. Core search and discovery work without AI at all — it's an option, not a requirement."
-        />
+    <div class="container feature-split">
+      <div>
+        <p class="eyebrow">Built for serious personal archives</p>
+        <h2>For people who remember the point, not the filename.</h2>
+      </div>
+      <div class="feature-list">
+        <div>
+          <h3>Semantic retrieval</h3>
+          <p>Find the memo, quote, email, or note even when you cannot remember the exact words.</p>
+        </div>
+        <div>
+          <h3>Automatic connections</h3>
+          <p>See related material across formats and projects without maintaining a hand-built graph.</p>
+        </div>
+        <div>
+          <h3>Annotations that matter</h3>
+          <p>Attach your intellectual response to source material: disagreement, confirmation, questions, and next steps.</p>
+        </div>
+        <div>
+          <h3>Your AI boundary</h3>
+          <p>Use local search without an API key, or opt into cloud/local AI synthesis only when you choose.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Privacy -->
   <section class="section">
-    <div class="container privacy-block">
-      <h2>Private by design. Not by policy.</h2>
-      <p>
-        Most tools promise privacy in their terms of service. Chauncy delivers it by architecture.
-      </p>
-      <p>
-        Your documents, your search index, and all discovered connections live in a database on your computer. Chauncy has no servers to breach, no account to compromise, and no telemetry to disable.
-      </p>
-      <p>
-        When you use an AI feature — summarization, deeper analysis — relevant excerpts are sent to the API provider you choose. You select the provider, you supply the key, and their privacy policy governs that data. Chauncy is transparent about exactly when this happens.
-      </p>
-      <p>
-        If you need fully offline AI analysis, point Chauncy at a local model. It supports that too.
-      </p>
-      <blockquote>
-        "No account. No cloud. No telemetry. Just your documents, on your machine."
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- Pricing CTA -->
-  <section class="section-alt">
     <div class="container cta-block">
-      <h2>One price. Yours to keep.</h2>
-      <p>No subscription. No monthly fee. Buy Chauncy once and it's yours.</p>
-      <a href="/pricing" class="btn btn-primary">See Pricing →</a>
+      <p class="eyebrow">Windows installer is ready</p>
+      <h2>Windows launch pricing is available now.</h2>
+      <p>Buy once through Stripe, then download the Windows installer from the Chauncy delivery page.</p>
+      <a href="/pricing" class="btn btn-primary">Buy Chauncy for Windows</a>
     </div>
   </section>
 
@@ -131,137 +166,274 @@ import FeatureCard from '../components/FeatureCard.astro';
 
 <style>
   .hero {
-    padding: 5rem 0 4rem;
-    text-align: center;
+    padding: 6rem 0 5rem;
   }
 
-  .hero-inner {
-    max-width: 720px;
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(520px, 1.08fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero-copy h1 {
+    margin-top: 0.85rem;
+    max-width: 740px;
   }
 
   .hero-sub {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: var(--color-text-muted);
-    line-height: 1.7;
+    margin-top: 1.2rem;
+    color: var(--color-text);
+    font-size: 1.28rem;
+    line-height: 1.65;
   }
 
   .hero-body {
-    margin-top: 0.75rem;
-    font-size: 1.05rem;
+    margin-top: 0.85rem;
     color: var(--color-text-muted);
-    line-height: 1.7;
+    font-size: 1.03rem;
+    line-height: 1.75;
   }
 
   .hero-actions {
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
-    justify-content: center;
     flex-wrap: wrap;
   }
 
-  .hero-platforms {
-    margin-top: 1rem;
-    font-size: 0.9rem;
+  .hero-trust {
+    margin-top: 1.35rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .hero-trust span {
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
     color: var(--color-text-muted);
-  }
-
-  .problem-block {
-    max-width: 680px;
-  }
-
-  .problem-block h2 {
-    margin-bottom: 1.5rem;
-  }
-
-  .problem-block p {
-    margin-bottom: 1rem;
-    color: var(--color-text-muted);
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-
-  .section-heading {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .step {
-    text-align: center;
-  }
-
-  .step-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--color-primary);
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .step h3 {
-    margin-bottom: 0.5rem;
-  }
-
-  .step p {
-    color: var(--color-text-muted);
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .privacy-block {
-    max-width: 680px;
-  }
-
-  .privacy-block h2 {
-    margin-bottom: 1.5rem;
-  }
-
-  .privacy-block p {
-    margin-bottom: 1rem;
-    color: var(--color-text-muted);
-    font-size: 1.05rem;
-    line-height: 1.7;
-  }
-
-  .privacy-block blockquote {
-    margin-top: 1.5rem;
-    padding: 1.25rem 1.5rem;
-    border-left: 4px solid var(--color-primary);
-    background: var(--color-surface);
-    border-radius: 0 8px 8px 0;
-    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 0.78rem;
     font-weight: 600;
-    color: var(--color-text);
-    font-style: italic;
+  }
+
+  .product-mockup {
+    border: 1px solid var(--color-border-bright);
+    border-radius: 14px;
+    background: #050505;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }
+
+  .mock-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.15rem;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(0, 0, 0, 0.76);
+  }
+
+  .mock-tab {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .mock-tab.active {
+    color: var(--color-primary);
+  }
+
+  .mock-status {
+    margin-left: auto;
+    color: var(--color-success);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .mock-query {
+    margin: 1.4rem auto 1.15rem;
+    width: calc(100% - 3rem);
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--color-border-bright);
+    border-radius: 14px;
+    color: var(--color-text-muted);
+    background: var(--color-bg-secondary);
+  }
+
+  .mock-body {
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr;
+    gap: 1rem;
+    padding: 0 1.2rem 1.2rem;
+  }
+
+  .mock-results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .mock-card,
+  .mock-panel {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-bg-secondary);
+  }
+
+  .mock-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem;
+  }
+
+  .mock-card.selected {
+    border-color: rgba(14, 165, 233, 0.48);
+    background: rgba(14, 165, 233, 0.08);
+  }
+
+  .mock-card strong {
+    display: block;
+    font-size: 0.88rem;
+  }
+
+  .mock-card p,
+  .mock-panel p {
+    margin-top: 0.35rem;
+    color: var(--color-text-muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .mock-card span {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .mock-panel {
+    padding: 1rem;
+    align-self: stretch;
+  }
+
+  .mock-panel-label {
+    color: var(--color-primary) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .safety-grid,
+  .feature-split {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .safety-grid p,
+  .cta-block p {
+    margin-top: 1rem;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .safety-cards,
+  .feature-list,
+  .workflow-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .safety-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .safety-card,
+  .workflow-step,
+  .feature-list > div {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-surface);
+  }
+
+  .safety-card p,
+  .workflow-step p,
+  .feature-list p {
+    margin-top: 0.55rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+
+  .section-intro {
+    max-width: 680px;
+    margin-bottom: 2rem;
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .workflow-step span {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 750;
+  }
+
+  .workflow-step h3 {
+    margin-top: 0.75rem;
+  }
+
+  .feature-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .cta-block {
+    max-width: 720px;
     text-align: center;
-    max-width: 600px;
   }
 
-  .cta-block p {
-    margin: 1rem 0 2rem;
-    color: var(--color-text-muted);
-    font-size: 1.1rem;
+  .cta-block .btn {
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    .hero-grid,
+    .safety-grid,
+    .feature-split {
+      grid-template-columns: 1fr;
+    }
+
+    .product-mockup {
+      max-width: 760px;
+    }
+
+    .workflow-grid,
+    .safety-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding-top: 4rem;
+    }
+
+    .mock-body,
+    .workflow-grid,
+    .safety-cards,
+    .feature-list {
+      grid-template-columns: 1fr;
+    }
+
+    .product-mockup {
+      display: none;
+    }
   }
 </style>

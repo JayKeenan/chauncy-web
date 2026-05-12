@@ -2,13 +2,19 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="Chauncy FAQ" description="Frequently asked questions about Chauncy.">
+<Base title="Chauncy FAQ" description="Frequently asked questions about Chauncy's local-first privacy model, launch status, and document curation workflow.">
 
   <section class="section">
     <div class="container faq-container">
-      <h1>Questions</h1>
+      <p class="eyebrow">Questions</p>
+      <h1>Practical answers before you trust Chauncy with your archive.</h1>
 
       <div class="faq-list">
+        <details>
+          <summary>Can I buy Chauncy right now?</summary>
+          <p>Yes. The Windows launch license is available on the <a href="/pricing">pricing page</a>. Checkout is handled by Stripe, then redirects to the Chauncy download page.</p>
+        </details>
+
         <details>
           <summary>What formats does Chauncy support?</summary>
           <p>PDF, email (including IMAP mailbox sync), Markdown, Microsoft Word, PowerPoint, plain text, HTML, web URLs via the clipper, typed notes, and voice notes. If you have documents in a format not listed, contact us — we're adding formats based on demand.</p>
@@ -27,6 +33,16 @@ import Base from '../layouts/Base.astro';
         <details>
           <summary>Do I need an AI API key to use Chauncy?</summary>
           <p>No. AI features are optional. Search, ingestion, and automatic document connections all work without an API key. The AI layer adds capabilities like natural language summarization when you want them.</p>
+        </details>
+
+        <details>
+          <summary>Is Chauncy an autonomous AI agent?</summary>
+          <p>No. Chauncy is a retrieval and curation tool. It does not browse the web for you, operate accounts, send email, make purchases, delete files, or run background action chains. It helps you find and inspect your own material.</p>
+        </details>
+
+        <details>
+          <summary>What does user curation mean?</summary>
+          <p>Chauncy can discover related material and propose useful connections, but you decide what matters. Your annotations, disagreements, confirmations, and selections turn search results into your own working knowledge.</p>
         </details>
 
         <details>
@@ -51,7 +67,7 @@ import Base from '../layouts/Base.astro';
 
         <details>
           <summary>Is macOS supported?</summary>
-          <p>Not at launch. macOS support is in active development. Join the waitlist at <a href="/waitlist">chauncy.dev/waitlist</a> and we'll notify you when it's ready. Launch pricing applies to waitlist customers.</p>
+          <p>Not at launch. macOS support is in active development. Join the waitlist at <a href="/waitlist">chauncy.dev/waitlist</a> and we'll notify you when it's ready.</p>
         </details>
 
         <details>
@@ -81,6 +97,7 @@ import Base from '../layouts/Base.astro';
 
   .faq-container h1 {
     margin-bottom: 2rem;
+    font-size: clamp(2rem, 5vw, 3.6rem);
   }
 
   .faq-list {
@@ -93,6 +110,7 @@ import Base from '../layouts/Base.astro';
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 1rem 1.25rem;
+    background: var(--color-surface);
   }
 
   details[open] {

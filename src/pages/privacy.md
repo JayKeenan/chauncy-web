@@ -12,11 +12,17 @@ description: How Chauncy handles your data.
 
 ## Overview
 
-Chauncy is a desktop application. It runs on your computer. Your documents, your search index, and all data Chauncy generates from your documents are stored locally on your machine.
+Chauncy is a desktop application. It runs on your computer. Your documents, your search index, your embeddings, your annotations, and the connections Chauncy derives from your documents are stored locally on your machine.
 
 Chauncy does not have a user account system. Chauncy does not collect telemetry. Chauncy does not operate servers that receive your data.
 
 This policy describes the limited circumstances in which data leaves your machine and what governs it when it does.
+
+## Safety Boundary
+
+Chauncy is not an autonomous agent. It does not browse the web on your behalf, operate third-party accounts, send email, purchase anything, delete files, or perform open-ended background action chains.
+
+Chauncy helps you retrieve, inspect, connect, and curate material you have chosen to add. You remain responsible for deciding what is relevant, accurate, and ready to use.
 
 ---
 
@@ -28,6 +34,7 @@ The following data is stored on your machine only, in a local database:
 - Metadata associated with those documents (filename, date, source)
 - Vector embeddings generated from your documents
 - Annotations you add to documents
+- Connections and search results derived from your documents
 - Your Chauncy settings and configuration
 
 This data does not leave your machine through any Chauncy mechanism.
@@ -36,9 +43,9 @@ This data does not leave your machine through any Chauncy mechanism.
 
 ## AI Features and Third-Party Providers
 
-Chauncy's AI features — including natural language query interpretation and document summarization — are optional. They require you to configure a third-party API provider (such as OpenAI, Anthropic, or Groq) and supply your own API key.
+Chauncy's AI features — including document summarization and deeper synthesis — are optional. They require you to configure a third-party API provider (such as OpenAI, Anthropic, or Groq) or a local model endpoint and supply your own credentials where required.
 
-When you use an AI feature, Chauncy sends relevant excerpts from your documents to the API endpoint you have configured. This transmission is governed entirely by the privacy policy of the provider you have chosen, not by this policy.
+When you explicitly use an AI feature, Chauncy sends relevant excerpts from your documents to the API endpoint you have configured. This transmission is governed entirely by the privacy policy of the provider you have chosen, not by this policy.
 
 Chauncy is transparent about when AI features are active. You are in control of which provider you use and when AI features are invoked.
 

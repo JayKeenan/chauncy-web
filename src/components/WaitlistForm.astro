@@ -1,18 +1,36 @@
 ---
-// macOS waitlist signup — FormSubmit.co integration
-// Submissions go to waitlist@chauncy.dev
+// FormSubmit.co integration
 // First submission requires one-time email verification
+
+interface Props {
+  title?: string;
+  description?: string;
+  subject?: string;
+  next?: string;
+  button?: string;
+  source?: string;
+}
+
+const {
+  title = 'Get notified when Chauncy is available for macOS',
+  description = "Enter your email and we'll let you know when it ships.",
+  subject = 'macOS Waitlist Signup',
+  next = 'https://chauncy.dev/waitlist',
+  button = 'Notify Me When macOS Is Ready',
+  source = 'macos-waitlist',
+} = Astro.props;
 ---
 
 <div class="waitlist-form">
-  <h3>Get notified when Chauncy is available for macOS</h3>
-  <p class="waitlist-subtext">Enter your email and we'll let you know when it ships.</p>
+  <h3>{title}</h3>
+  <p class="waitlist-subtext">{description}</p>
   <form action="https://formsubmit.co/waitlist@chauncy.dev" method="POST" class="waitlist-form-fields">
     <input type="email" name="email" placeholder="you@example.com" required />
-    <input type="hidden" name="_subject" value="macOS Waitlist Signup" />
-    <input type="hidden" name="_next" value="https://chauncy.dev/waitlist" />
+    <input type="hidden" name="_subject" value={subject} />
+    <input type="hidden" name="_next" value={next} />
+    <input type="hidden" name="source" value={source} />
     <input type="hidden" name="_captcha" value="false" />
-    <button type="submit" class="btn btn-primary">Notify Me When macOS Is Ready</button>
+    <button type="submit" class="btn btn-primary">{button}</button>
   </form>
 </div>
 
@@ -50,7 +68,7 @@
     font-size: 1rem;
     border: 1px solid var(--color-border);
     border-radius: 6px;
-    background: var(--color-surface);
+    background: var(--color-bg-secondary);
     color: var(--color-text);
   }
 

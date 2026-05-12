@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;750&display=swap");
+
 /* ── Reset ── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,21 +9,29 @@
 
 /* ── Variables ── */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a2e;
-  --color-text-muted: #555;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-accent: #f59e0b;
-  --color-surface: #f8fafc;
-  --color-border: #e2e8f0;
-  --color-success: #16a34a;
+  --color-bg: #030303;
+  --color-bg-secondary: #080808;
+  --color-bg-tertiary: #111;
+  --color-text: #f1f5f9;
+  --color-text-muted: #a0a7b4;
+  --color-text-dim: #67707d;
+  --color-primary: #0ea5e9;
+  --color-primary-hover: #38bdf8;
+  --color-primary-muted: rgba(14, 165, 233, 0.12);
+  --color-accent: #10b981;
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #121212;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-border-bright: rgba(255, 255, 255, 0.16);
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
 
-  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', monospace;
 
-  --max-width: 1100px;
+  --max-width: 1160px;
   --nav-height: 64px;
+  --shadow-md: 0 16px 48px rgba(0, 0, 0, 0.38);
 }
 
 /* ── Base ── */
@@ -37,6 +47,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(14, 165, 233, 0.18), transparent 34rem),
+    linear-gradient(180deg, #050505 0%, #030303 45%, #070707 100%);
 }
 
 main {
@@ -61,10 +74,11 @@ img {
 h1, h2, h3, h4 {
   line-height: 1.2;
   font-weight: 700;
+  letter-spacing: 0;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.75rem; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.9rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
 h3 { font-size: 1.25rem; }
 
 /* ── Utility ── */
@@ -75,12 +89,14 @@ h3 { font-size: 1.25rem; }
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .section-alt {
-  padding: 4rem 0;
-  background: var(--color-surface);
+  padding: 5rem 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01));
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .btn {
@@ -97,7 +113,8 @@ h3 { font-size: 1.25rem; }
 
 .btn-primary {
   background: var(--color-primary);
-  color: #fff;
+  color: #031018;
+  box-shadow: 0 0 28px rgba(14, 165, 233, 0.22);
 }
 
 .btn-primary:hover {
@@ -106,15 +123,23 @@ h3 { font-size: 1.25rem; }
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  border: 1px solid var(--color-border-bright);
 }
 
 .btn-secondary:hover {
-  background: var(--color-primary);
-  color: #fff;
+  border-color: var(--color-primary);
+  color: var(--color-primary-hover);
   text-decoration: none;
+}
+
+.eyebrow {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 /* ── Legal pages (markdown) ── */
@@ -148,7 +173,7 @@ h3 { font-size: 1.25rem; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  h1 { font-size: 1.75rem; }
+  h1 { font-size: 2.35rem; }
   h2 { font-size: 1.4rem; }
 
   .section, .section-alt {

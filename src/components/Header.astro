@@ -9,12 +9,12 @@ const navLinks = [
 
 <header class="site-header">
   <nav class="container nav">
-    <a href="/" class="logo">Chauncy</a>
+    <a href="/" class="logo">CHAUNCY</a>
     <ul class="nav-links">
       {navLinks.map(link => (
         <li><a href={link.href}>{link.label}</a></li>
       ))}
-      <li><a href="/pricing" class="btn btn-primary btn-sm">Get Chauncy</a></li>
+      <li><a href="/pricing" class="btn btn-primary btn-sm">Buy Chauncy</a></li>
     </ul>
   </nav>
 </header>
@@ -25,6 +25,11 @@ const navLinks = [
     border-bottom: 1px solid var(--color-border);
     display: flex;
     align-items: center;
+    background: rgba(3, 3, 3, 0.82);
+    backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+    z-index: 20;
   }
 
   .nav {
@@ -35,9 +40,10 @@ const navLinks = [
   }
 
   .logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text);
+    font-size: 1.05rem;
+    font-weight: 750;
+    letter-spacing: 0.18em;
+    color: var(--color-primary);
     text-decoration: none;
   }
 

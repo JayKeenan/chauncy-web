@@ -1,103 +1,96 @@
 ---
 import Base from '../layouts/Base.astro';
-import PricingCard from '../components/PricingCard.astro';
+
+const launchCheckoutUrl = 'https://buy.stripe.com/eVq8wPaNo7k71gVb2U57W03';
 ---
 
-<Base title="Chauncy Pricing — One-Time Purchase" description="Buy once. Keep forever. No subscription, no renewal, no cloud account required.">
+<Base title="Chauncy Pricing" description="Buy Chauncy for Windows at the $99 early adopter launch price. Regular pricing is planned at $149 after the launch allocation.">
 
   <section class="section">
-    <div class="container">
-      <h1 class="page-heading">Simple pricing. No surprises.</h1>
-      <p class="page-sub">Buy once. Keep forever. No subscription, no renewal, no cloud account required.</p>
+    <div class="container launch-container">
+      <p class="eyebrow">Windows launch price available now</p>
+      <h1>Buy Chauncy once. Keep your archive local.</h1>
+      <p class="page-sub">
+        The early adopter Windows license is available for $99. After the first launch allocation, regular one-time pricing is planned at $149.
+      </p>
 
-      <div class="pricing-grid">
-        <PricingCard
-          name="Launch Price"
-          price="$89"
-          originalPrice="$129"
-          description="First 100 licenses at a discount"
-          features={[
-            'Chauncy for Windows and Linux',
-            'All current features',
-            'All future updates included',
-            '14-day money-back guarantee',
-            'macOS version included when released',
-          ]}
-          cta="Buy Now — $89"
-          ctaHref="https://buy.stripe.com/00w00j8FgcEr9Nrdb257W02"
-          highlighted={true}
-        />
-        <PricingCard
-          name="Regular Price"
-          price="$129"
-          description="Standard license"
-          features={[
-            'Chauncy for Windows and Linux',
-            'All current features',
-            'All future updates included',
-            '14-day money-back guarantee',
-            'macOS version included when released',
-          ]}
-          cta="Buy Now — $129"
-          ctaHref="https://buy.stripe.com/4gM7sLaNo8obe3H0og57W01"
-        />
+      <div class="launch-grid">
+        <div class="launch-card highlighted">
+          <span class="badge">Planned launch price</span>
+          <h2>$99</h2>
+          <p>First 100 licenses during the Windows launch.</p>
+          <ul>
+            <li>Chauncy for Windows at launch</li>
+            <li>Linux build when verified for release</li>
+            <li>macOS build included when released</li>
+            <li>All current features</li>
+            <li>14-day money-back guarantee</li>
+          </ul>
+          <a href={launchCheckoutUrl} class="btn btn-primary card-cta">Buy Chauncy - $99</a>
+        </div>
+        <div class="launch-card">
+          <span class="badge muted">Regular price</span>
+          <h2>$149</h2>
+          <p>Standard one-time license after the launch allocation is gone.</p>
+          <ul>
+            <li>No subscription</li>
+            <li>No Chauncy cloud account</li>
+            <li>No telemetry</li>
+            <li>Bring your own AI provider or local endpoint</li>
+            <li>Your archive stays on your machine</li>
+          </ul>
+        </div>
       </div>
 
-      <p class="fine-print">Secure checkout via Stripe. Receipt emailed immediately. Download link on confirmation page.</p>
+      <p class="fine-print">Secure checkout is handled by Stripe. After payment, Stripe redirects to the Chauncy download page.</p>
     </div>
   </section>
 
   <section class="section-alt">
-    <div class="container">
-      <h2 class="page-heading">Platforms</h2>
-      <div class="platforms">
-        <div class="platform available">
-          <h3>Windows</h3>
-          <p>Available now</p>
-        </div>
-        <div class="platform available">
-          <h3>Linux</h3>
-          <p>Available now</p>
-        </div>
-        <div class="platform coming-soon">
-          <h3>macOS</h3>
-          <p>Coming soon</p>
-        </div>
+    <div class="container readiness">
+      <div>
+        <p class="eyebrow">Purchase flow</p>
+        <h2>What happens after checkout.</h2>
       </div>
-      <div class="mac-callout">
-        <p><strong>macOS coming soon.</strong> Join the waitlist and we'll notify you when the macOS build is ready. Launch pricing applies.</p>
-        <a href="/waitlist" class="btn btn-secondary">Join the macOS Waitlist</a>
+      <div class="readiness-list">
+        <div>
+          <h3>Stripe checkout</h3>
+          <p>Payment is processed by Stripe using the $99 launch Payment Link.</p>
+        </div>
+        <div>
+          <h3>Download delivery</h3>
+          <p>After payment, Stripe redirects to the Chauncy download page with the Windows installer and SHA-256 checksum.</p>
+        </div>
+        <div>
+          <h3>Local-first use</h3>
+          <p>Chauncy runs on your computer. Your archive, search index, and annotations stay local.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container faq-on-pricing">
-      <h2 class="page-heading">Common questions</h2>
+      <h2>Common questions</h2>
 
       <details>
-        <summary>Is this really a one-time purchase?</summary>
-        <p>Yes. Pay once, use it forever. No subscription, no renewal.</p>
+        <summary>Is Chauncy still a one-time purchase?</summary>
+        <p>Yes. Buy once and use Chauncy without a subscription.</p>
       </details>
 
       <details>
-        <summary>What's included in future updates?</summary>
-        <p>All feature updates and bug fixes for the current major version are included. If a future major version introduces a significant pricing change, existing customers will be notified well in advance.</p>
+        <summary>What happens after I pay?</summary>
+        <p>Stripe redirects you to the Chauncy download page for the Windows installer. Your receipt is handled by Stripe.</p>
       </details>
 
       <details>
-        <summary>What payment methods do you accept?</summary>
-        <p>All major credit and debit cards via Stripe. Stripe also supports Apple Pay and Google Pay where available.</p>
+        <summary>Is the $99 price permanent?</summary>
+        <p>No. The $99 price is the early adopter Windows launch price for the first 100 licenses. Regular pricing is planned at $149.</p>
       </details>
 
       <details>
-        <summary>Can I get a refund?</summary>
-        <p>Yes. If Chauncy isn't right for you, request a refund within 14 days of purchase. No questions asked. See the <a href="/returns">Return Policy</a> for details.</p>
-      </details>
-
-      <details>
-        <summary>Is the launch price really limited to 100 licenses?</summary>
-        <p>Yes. Once 100 licenses are sold at $89, the price moves to $129 permanently.</p>
+        <summary>Will privacy claims change when sales open?</summary>
+        <p>No. Chauncy remains local-first, account-free, telemetry-free, and explicit about any optional AI provider request.</p>
       </details>
     </div>
   </section>
@@ -105,104 +98,153 @@ import PricingCard from '../components/PricingCard.astro';
 </Base>
 
 <style>
-  .page-heading {
+  .launch-container {
+    max-width: 900px;
     text-align: center;
-    margin-bottom: 0.75rem;
+  }
+
+  .launch-container h1 {
+    margin: 0.8rem auto 0;
+    max-width: 820px;
+    font-size: clamp(2.1rem, 5vw, 4rem);
   }
 
   .page-sub {
-    text-align: center;
+    margin: 1rem auto 2.5rem;
+    max-width: 720px;
     color: var(--color-text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
+    font-size: 1.12rem;
+    line-height: 1.75;
   }
 
-  .pricing-grid {
+  .launch-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 700px;
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+  }
+
+  .launch-card {
+    position: relative;
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface);
+  }
+
+  .launch-card.highlighted {
+    border-color: rgba(14, 165, 233, 0.5);
+    box-shadow: var(--shadow-md);
+  }
+
+  .badge {
+    display: inline-flex;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    background: var(--color-primary-muted);
+    color: var(--color-primary-hover);
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .badge.muted {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--color-text-muted);
+  }
+
+  .launch-card h2 {
+    font-size: 3rem;
+  }
+
+  .launch-card p,
+  .fine-print {
+    color: var(--color-text-muted);
+    line-height: 1.65;
+  }
+
+  .launch-card ul {
+    margin-top: 1.25rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .launch-card li {
+    color: var(--color-text);
+    font-size: 0.95rem;
+  }
+
+  .launch-card li::before {
+    content: '✓ ';
+    color: var(--color-success);
+    font-weight: 700;
+  }
+
+  .card-cta {
+    margin-top: 1.5rem;
+    width: 100%;
+    justify-content: center;
   }
 
   .fine-print {
-    text-align: center;
-    color: var(--color-text-muted);
+    margin-top: 1rem;
     font-size: 0.85rem;
-    margin-top: 1.5rem;
   }
 
-  .platforms {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
+  .readiness {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 3rem;
   }
 
-  .platform {
-    text-align: center;
-    padding: 1.5rem 2rem;
+  .readiness-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .readiness-list > div,
+  details {
+    padding: 1.2rem;
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    min-width: 160px;
+    background: var(--color-surface);
   }
 
-  .platform h3 {
-    margin-bottom: 0.25rem;
-  }
-
-  .platform.available p {
-    color: var(--color-success);
-    font-weight: 600;
-  }
-
-  .platform.coming-soon p {
+  .readiness-list p,
+  details p {
+    margin-top: 0.6rem;
     color: var(--color-text-muted);
-    font-style: italic;
-  }
-
-  .mac-callout {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .mac-callout p {
-    color: var(--color-text-muted);
-    margin-bottom: 1rem;
+    line-height: 1.65;
   }
 
   .faq-on-pricing {
-    max-width: 720px;
+    max-width: 760px;
   }
 
-  .faq-on-pricing .page-heading {
+  .faq-on-pricing h2 {
     margin-bottom: 1.5rem;
   }
 
   details {
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-
-  details[open] {
-    padding-bottom: 1.25rem;
+    margin-bottom: 0.6rem;
   }
 
   summary {
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    font-size: 1.05rem;
   }
 
   summary::marker {
     color: var(--color-primary);
   }
 
-  details p {
-    margin-top: 0.75rem;
-    color: var(--color-text-muted);
-    line-height: 1.6;
+  @media (max-width: 780px) {
+    .launch-grid,
+    .readiness {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

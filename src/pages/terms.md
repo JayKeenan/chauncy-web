@@ -34,7 +34,15 @@ Your documents and data belong to you. Chauncy does not claim any rights over co
 
 ---
 
-## 5. Acceptable Use
+## 5. User Curation and Output
+
+Chauncy retrieves, connects, and summarizes material to help you work with your own archive. You are responsible for reviewing source material, evaluating relevance and accuracy, and deciding how to use any results, annotations, or AI-assisted synthesis.
+
+Chauncy is not an autonomous agent and should not be treated as one. It does not make decisions, operate accounts, or take external actions on your behalf.
+
+---
+
+## 6. Acceptable Use
 
 You may not use Chauncy:
 
@@ -44,30 +52,30 @@ You may not use Chauncy:
 
 ---
 
-## 6. No Warranty
+## 7. No Warranty
 
 Chauncy is provided "as is." We make no warranty that Chauncy will be error-free, uninterrupted, or suitable for any particular purpose. Use it at your own risk.
 
 ---
 
-## 7. Limitation of Liability
+## 8. Limitation of Liability
 
 To the maximum extent permitted by law, Chauncy's liability for any claim arising from your use of the application is limited to the amount you paid for it.
 
 ---
 
-## 8. Refunds
+## 9. Refunds
 
 Refund requests within 14 days of purchase will be honored. See the [Return Policy](/returns) for details.
 
 ---
 
-## 9. Changes
+## 10. Changes
 
 We may update these terms. Material changes will be communicated via the website. Continued use after changes constitutes acceptance.
 
 ---
 
-## 10. Contact
+## 11. Contact
 
 For questions, contact [support@chauncy.dev](mailto:support@chauncy.dev).
