@@ -2,93 +2,117 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="Chauncy FAQ" description="Frequently asked questions about Chauncy's local-first privacy model, launch status, and document curation workflow.">
+<Base title="FAQ - Chauncy" description="Answers to questions buyers actually ask: privacy, AI, ingestion, refunds, system requirements, and how Chauncy fits next to tools you already use.">
 
   <section class="section">
     <div class="container faq-container">
-      <p class="eyebrow">Questions</p>
-      <h1>Practical answers before you trust Chauncy with your archive.</h1>
+      <p class="eyebrow">Straight answers</p>
+      <h1>Frequently asked questions.</h1>
+      <p class="faq-sub">If your question isn't here, email <a href="mailto:support@chauncy.dev">support@chauncy.dev</a>. We answer.</p>
 
-      <div class="faq-list">
-        <details>
-          <summary>Can I buy Chauncy right now?</summary>
-          <p>Yes. The Windows launch license is available on the <a href="/pricing">pricing page</a>. Checkout is handled by Stripe, then redirects to the Chauncy download page.</p>
-        </details>
+      <div class="faq-section">
+        <h2>Privacy and Data</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What stays on my machine?</summary>
+            <p>Everything that matters. Your documents, the text Chauncy extracts from them, the search index, the embeddings, and your annotations all live on your local disk. Chauncy doesn't require an account, doesn't phone home, and doesn't track usage.</p>
+          </details>
 
-        <details>
-          <summary>What formats does Chauncy support?</summary>
-          <p>PDF, email (including IMAP mailbox sync), Markdown, Microsoft Word, PowerPoint, plain text, HTML, web URLs via the clipper, typed notes, and voice notes. If you have documents in a format not listed, contact us — we're adding formats based on demand.</p>
-        </details>
+          <details>
+            <summary>What leaves my machine, and when?</summary>
+            <p>Two things, both only when you initiate them:</p>
+            <ol>
+              <li><strong>URL ingestion</strong> — when you paste a URL, Chauncy fetches the page from the web. The request goes out, the page comes back, Chauncy indexes it. After that, no further network activity on that document.</li>
+              <li><strong>AI synthesis</strong> — if you turn AI on, only the excerpts Chauncy selects to answer your specific question are sent to your chosen provider, and only when you ask. Your full collection, index, and annotations stay local. If you use Ollama or a local OpenAI-compatible endpoint, nothing leaves the machine at all.</li>
+            </ol>
+          </details>
 
-        <details>
-          <summary>Does Chauncy require an internet connection?</summary>
-          <p>No. All core features — search, document ingestion, automatic connections — run entirely on your machine. An internet connection is only needed when you use an AI feature (summarization, deeper analysis), because those requests go to the API provider you've configured.</p>
-        </details>
+          <details>
+            <summary>Does Chauncy work without an internet connection?</summary>
+            <p>Yes for search, indexing, and AI synthesis using a local model such as Ollama or a local OpenAI-compatible endpoint. The internet is needed only for URL ingestion, cloud AI providers, and voice input, which uses your system's speech recognition and may require network.</p>
+          </details>
 
-        <details>
-          <summary>Is Chauncy a web app?</summary>
-          <p>No. Chauncy is a desktop application. It runs locally on your computer and does not send your archive to a Chauncy server. There is no Chauncy cloud account and no Chauncy document server.</p>
-        </details>
+          <details>
+            <summary>Do I need to create an account?</summary>
+            <p>No. Buy the installer through Stripe, install it, run it. No account, no login, no profile.</p>
+          </details>
+        </div>
+      </div>
 
-        <details>
-          <summary>Do I need an AI API key to use Chauncy?</summary>
-          <p>No. AI features are optional. Search, ingestion, and automatic document connections all work without an API key. The AI layer adds capabilities like natural language summarization when you want them.</p>
-        </details>
+      <div class="faq-section">
+        <h2>AI and Costs</h2>
+        <div class="faq-list">
+          <details>
+            <summary>Do I need an AI API key to use Chauncy?</summary>
+            <p>No. Chauncy's semantic search works without any AI provider. AI synthesis is optional — turn it on when you want it, leave it off when you don't.</p>
+          </details>
 
-        <details>
-          <summary>Is Chauncy an autonomous AI agent?</summary>
-          <p>No. Chauncy is a retrieval and curation tool. It does not browse the web for you, operate accounts, send email, make purchases, delete files, or run background action chains. It helps you find and inspect your own material.</p>
-        </details>
+          <details>
+            <summary>If I want AI, what does it cost?</summary>
+            <p>Whatever your chosen provider charges. Chauncy uses your own API key with Anthropic or OpenAI; you pay the provider directly for what you use. Chauncy doesn't mark up provider costs, doesn't route your requests through our servers, and doesn't see your prompts or responses. If you run a local model with Ollama or a local OpenAI-compatible endpoint, there's no provider cost at all — just the hardware you already own.</p>
+          </details>
 
-        <details>
-          <summary>What does user curation mean?</summary>
-          <p>Chauncy can discover related material and propose useful connections, but you decide what matters. Your annotations, disagreements, confirmations, and selections turn search results into your own working knowledge.</p>
-        </details>
+          <details>
+            <summary>What's involved in setting up a local AI model?</summary>
+            <p>Chauncy doesn't bundle a local AI model. To use one, you install model-serving software on your own machine and download a model that fits your hardware. Ollama is a common choice. Chauncy connects to the running model through its local API. The setup is well documented by those projects and typically takes a short session to complete. If you'd rather skip the setup, cloud providers and search-only mode are available without any of this.</p>
+          </details>
+        </div>
+      </div>
 
-        <details>
-          <summary>Which AI providers does Chauncy support?</summary>
-          <p>OpenAI, Anthropic, Groq, and compatible custom endpoints. Chauncy can also use local LLMs through tools like Ollama or LM Studio when you point Chauncy at their local API endpoint.</p>
-        </details>
+      <div class="faq-section">
+        <h2>What Chauncy Does</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What file formats can I ingest?</summary>
+            <p>PDF, Word (.docx), PowerPoint (.pptx), Markdown, HTML/HTM, plain text, and email files (.eml, .mbox). Web pages can be ingested by pasting a URL.</p>
+          </details>
 
-        <details>
-          <summary>Can I use Chauncy with Ollama or another local LLM?</summary>
-          <p>Yes. If you run Ollama, LM Studio, or another compatible local model server, Chauncy can connect to that local endpoint. In that setup, AI requests are handled on your machine instead of being sent to a cloud AI provider.</p>
-        </details>
+          <details>
+            <summary>How does Chauncy fit next to tools I already use?</summary>
+            <p>Different tools, different jobs.</p>
+            <ul>
+              <li><strong>Note-taking and PKM tools</strong> ask you to build a knowledge graph by hand — tagging, backlinking, naming things consistently. Chauncy doesn't ask for that work. It infers the structure from the meaning of what you've written.</li>
+              <li><strong>Desktop search tools</strong> match keywords. Chauncy matches meaning. A search can find a relevant document even when it shares no keywords with your query.</li>
+              <li><strong>Read-it-later services</strong> save articles to read. Chauncy makes the things you've saved anywhere searchable by meaning.</li>
+            </ul>
+            <p>You can use Chauncy alongside any of these. Chauncy is the layer that lets you find and synthesize across what you've collected, however you collected it.</p>
+          </details>
 
-        <details>
-          <summary>Who is Chauncy for?</summary>
-          <p>Researchers, writers, analysts, consultants, and anyone managing a large personal document collection who doesn't want to spend their time organizing it. If you've ever thought "I know I saved something about this somewhere," Chauncy is for you.</p>
-        </details>
+          <details>
+            <summary>Can I have multiple separate libraries?</summary>
+            <p>Not at launch. Chauncy supports one collection per installation. You can ingest from many folders, mailboxes, and URLs, but everything lands in the same searchable library.</p>
+          </details>
+        </div>
+      </div>
 
-        <details>
-          <summary>Who is Chauncy not for?</summary>
-          <p>Chauncy is not designed for compliance-regulated environments. If you operate under HIPAA, attorney-client privilege requirements, federal grant data handling rules, or similar regulatory frameworks, Chauncy is not the right tool. We're not built for that use case and make no claims to support it.</p>
-        </details>
+      <div class="faq-section">
+        <h2>Buying and Using</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What does $99 get me?</summary>
+            <p>A perpetual license to install and use Chauncy on computers you own or control, plus all updates within the current major version. New major versions may carry separate pricing; existing customers are notified in advance.</p>
+          </details>
 
-        <details>
-          <summary>Does Chauncy sync across devices?</summary>
-          <p>Not currently. Chauncy is a single-machine application. Your document collection lives on the machine where you installed it.</p>
-        </details>
+          <details>
+            <summary>What are the system requirements?</summary>
+            <p>Windows 10 or 11, 64-bit. 4 GB RAM minimum, 8 GB recommended for larger collections. Roughly 1 GB free disk for the application and runtime, plus space for your indexed content as it grows. No GPU required.</p>
+          </details>
 
-        <details>
-          <summary>Is macOS supported?</summary>
-          <p>Not at launch. macOS support is in active development. Join the waitlist at <a href="/waitlist">chauncy.dev/waitlist</a> and we'll notify you when it's ready.</p>
-        </details>
+          <details>
+            <summary>Is there a Mac version?</summary>
+            <p>Not yet. macOS support is in development. There's a waitlist in the footer.</p>
+          </details>
 
-        <details>
-          <summary>Where do my documents go when I add them?</summary>
-          <p>Into a local database on your machine. The full text, metadata, and vector embeddings are stored there. Nothing leaves your machine unless you use an AI feature.</p>
-        </details>
+          <details>
+            <summary>What if Chauncy isn't right for me?</summary>
+            <p>Email <a href="mailto:support@chauncy.dev">support@chauncy.dev</a> with the subject "Refund Request" within 14 days of your purchase. No explanation required. Refunds are processed within 3-5 business days through Stripe back to your original payment method.</p>
+          </details>
+        </div>
+      </div>
 
-        <details>
-          <summary>Can I move my Chauncy database to a different machine?</summary>
-          <p>Yes. Chauncy stores everything in a database directory you can locate in Settings. Copy it to your new machine and you're done. Documentation for migration is included.</p>
-        </details>
-
-        <details>
-          <summary>What happens if I want to stop using Chauncy?</summary>
-          <p>Your documents are yours. You can export everything and Chauncy stores nothing externally to delete.</p>
-        </details>
+      <div class="faq-cta">
+        <p>Still have questions? Email <a href="mailto:support@chauncy.dev">support@chauncy.dev</a>. We answer.</p>
+        <a href="/pricing" class="btn btn-primary">Buy Chauncy for Windows - $99</a>
       </div>
     </div>
   </section>
@@ -97,18 +121,34 @@ import Base from '../layouts/Base.astro';
 
 <style>
   .faq-container {
-    max-width: 720px;
+    max-width: 840px;
   }
 
   .faq-container h1 {
-    margin-bottom: 2rem;
-    font-size: clamp(2rem, 5vw, 3.6rem);
+    margin-top: 0.8rem;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+  }
+
+  .faq-sub {
+    margin-top: 1rem;
+    color: var(--color-text-muted);
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .faq-section {
+    margin-top: 3rem;
+  }
+
+  .faq-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.45rem;
   }
 
   .faq-list {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.65rem;
   }
 
   details {
@@ -123,7 +163,7 @@ import Base from '../layouts/Base.astro';
   }
 
   summary {
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     font-size: 1.05rem;
   }
@@ -132,9 +172,34 @@ import Base from '../layouts/Base.astro';
     color: var(--color-primary);
   }
 
-  details p {
+  details p,
+  details li,
+  .faq-cta p {
     margin-top: 0.75rem;
     color: var(--color-text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
+  }
+
+  details ul,
+  details ol {
+    margin-top: 0.75rem;
+    padding-left: 1.25rem;
+  }
+
+  details strong {
+    color: var(--color-text);
+  }
+
+  .faq-cta {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface);
+    text-align: center;
+  }
+
+  .faq-cta .btn {
+    margin-top: 1.25rem;
   }
 </style>
