@@ -1,0 +1,379 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Features - Chauncy" description="A complete view of what Chauncy does: semantic search, multi-format ingestion, optional AI synthesis with bring-your-own-provider support, annotations, and local-first privacy by architecture.">
+
+  <section class="section features-hero">
+    <div class="container narrow">
+      <p class="eyebrow">What's in the box</p>
+      <h1>The whole tool, in detail.</h1>
+      <p class="page-sub">
+        Chauncy is a focused application — semantic retrieval over the documents you choose to keep, with optional AI on your own terms. This page lays out what's actually in the Windows installer.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">Search</p>
+        <h2>Ask in plain English. Find by meaning.</h2>
+        <p>Chauncy reads what you ingest, breaks it into passages, and indexes each passage by meaning using a local embedding model. When you search, Chauncy returns the documents whose content most closely matches your query — whether or not your words appear in them.</p>
+      </div>
+      <div class="detail-grid">
+        <article>
+          <h3>Semantic by default</h3>
+          <p>Plain-English queries match by meaning. A search for "natural camouflage" can find an article about zebra stripes that never uses the word "camouflage." A search for "advice about handling difficult conversations" can find an email about an argument with a colleague that shares no keywords with your query.</p>
+        </article>
+        <article>
+          <h3>Quick string lookup</h3>
+          <p>Type a query that starts with <code>#</code> or <code>~</code> followed by a term, and Chauncy switches to a fast string scan instead of semantic search. Use it when you know the exact word or tag you're looking for.</p>
+        </article>
+        <article>
+          <h3>Results are documents, not fragments</h3>
+          <p>A search result is a source document, ranked by its best matching passage. The excerpt shown on the result card is the strongest match within that document. Clicking opens the full stored view so you can read the surrounding context.</p>
+        </article>
+        <article>
+          <h3>Annotations searchable alongside sources</h3>
+          <p>Your notes and reactions to a document become part of the searchable collection. A query can surface a document because your annotation on it matched, not just the source text.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">Ingestion</p>
+        <h2>Bring in what you want. Leave the rest alone.</h2>
+        <p>Chauncy ingests material you point it at. It does not scan your hard drive, monitor your activity, or pull from the cloud without your action.</p>
+      </div>
+      <div class="detail-grid">
+        <article>
+          <h3>Files and folders</h3>
+          <p>Add individual files or whole folder trees. Supported formats: PDF, Word (.docx), PowerPoint (.pptx), Markdown, HTML/HTM, plain text, and email files (.eml, .mbox). Recursive ingestion through subfolders is supported.</p>
+        </article>
+        <article>
+          <h3>Web pages by URL</h3>
+          <p>Paste a URL. Chauncy fetches the page and indexes its content. Useful for capturing articles, documentation, blog posts, and reference material you want to keep accessible.</p>
+        </article>
+        <article>
+          <h3>Email - three ways</h3>
+          <ul>
+            <li>Forward important messages to a dedicated folder, then save them into a Chauncy watch folder.</li>
+            <li>Drop .eml or .mbox files into a folder Chauncy is watching.</li>
+            <li>Configure direct IMAP sync for a specific mailbox with your server, port, and credentials.</li>
+          </ul>
+          <p>Direct IMAP is best suited to a dedicated reference mailbox, not your live inbox. You decide what gets indexed by choosing what lands in that mailbox.</p>
+        </article>
+        <article>
+          <h3>Watched folders</h3>
+          <p>Configure a folder for periodic ingestion. Chauncy scans it roughly every two minutes, ingests new supported files, and moves processed files to an archive folder you specify. This is an intake queue, not two-way file sync.</p>
+        </article>
+        <article>
+          <h3>Voice input</h3>
+          <p>Dictate searches and notes directly using your machine's speech recognition. Voice input requires a working WebView2 with speech recognition support and may require network availability depending on your system. English (US) is supported.</p>
+        </article>
+        <article>
+          <h3>What Chauncy stores</h3>
+          <p>Chauncy indexes a local copy of the text it extracts. Your original files stay where they are, except for files moved through a watched-folder workflow. Searches continue to work even if the original source file is moved or deleted.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">Annotations</p>
+        <h2>Your reactions, kept with the source.</h2>
+        <p>Every document you ingest can carry your annotations — freeform notes attached to the source. Disagreements, confirmations, questions, conclusions, cross-references, anything worth saying.</p>
+      </div>
+      <div class="detail-grid two">
+        <article>
+          <h3>Indexed and searchable</h3>
+          <p>When you add or change an annotation, Chauncy reprocesses the parent document and includes the annotation text in the search index. A query for an idea you wrote in a margin note can surface the document the annotation lives on.</p>
+        </article>
+        <article>
+          <h3>Bound to the document</h3>
+          <p>Annotations travel with the document they're attached to. Open the document later and the annotations are there. Search for content related to your annotation and the document comes back with the annotation visible.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">Optional AI</p>
+        <h2>Add an LLM when you want one. Skip it when you don't.</h2>
+        <p>Chauncy's search runs locally and needs no AI provider. When you want a language model to summarize results, draft from sources, or answer questions across your documents, turn AI synthesis on and connect a provider. Until then, nothing leaves your machine.</p>
+      </div>
+      <div class="provider-grid">
+        <article>
+          <h3>Anthropic</h3>
+          <p>Bring your own API key and pay Anthropic directly.</p>
+        </article>
+        <article>
+          <h3>OpenAI</h3>
+          <p>Bring your own API key and pay OpenAI directly.</p>
+        </article>
+        <article>
+          <h3>Ollama</h3>
+          <p>Run a model on your own hardware. No API key, no recurring cost, nothing leaving your machine.</p>
+        </article>
+        <article>
+          <h3>Custom OpenAI-compatible endpoint</h3>
+          <p>Point Chauncy at any local or remote endpoint that speaks the OpenAI API.</p>
+        </article>
+      </div>
+      <div class="callout-grid">
+        <article>
+          <h3>What leaves your machine, when</h3>
+          <p>For cloud providers, only the excerpts Chauncy selects to answer your specific question are sent to the provider, and only when you ask. Your full document collection, index, and annotations stay local. For Ollama and custom local endpoints, nothing leaves the machine at all.</p>
+        </article>
+        <article>
+          <h3>Bring-your-own-key economics</h3>
+          <p>You pay the provider directly for what you use. Chauncy doesn't mark up provider costs, doesn't route your requests through our servers, and doesn't see your prompts or responses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">Storage</p>
+        <h2>Everything that matters lives on your disk.</h2>
+        <p>Chauncy is built around a local database. Your documents, search index, embeddings, and annotations all live on your machine, in a directory you can locate, back up, and inspect.</p>
+      </div>
+      <div class="detail-grid">
+        <article>
+          <h3>No account, no telemetry</h3>
+          <p>Chauncy doesn't require an account, doesn't phone home, and doesn't track usage. Buy the installer, run it, use the software.</p>
+        </article>
+        <article>
+          <h3>Embeddings generated locally</h3>
+          <p>The embedding model that powers semantic search runs on your machine. It ships with the installer; no network call is required to index your documents or run a search.</p>
+        </article>
+        <article>
+          <h3>Backup and restore</h3>
+          <p>Chauncy includes a backup utility in Settings. Create a compressed backup of your full database, list and manage past backups, or restore from a backup to roll back the state. Backups are .tar.gz archives stored where you choose.</p>
+        </article>
+        <article>
+          <h3>Source-file independence</h3>
+          <p>Chauncy stores a copy of the text it extracts from each source. If you delete or move the original file, search still works against Chauncy's stored copy. Chauncy does not currently warn you if a source file goes missing on disk; the document remains visible in the index until you remove it through Chauncy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">By design</p>
+        <h2>Capabilities deliberately left out.</h2>
+        <p>Chauncy is small on purpose. The capabilities below are not in the software — not as oversights, but as choices.</p>
+      </div>
+      <div class="detail-grid">
+        <article>
+          <h3>Not an agent</h3>
+          <p>Chauncy doesn't browse the web on its own, operate accounts, send email, buy things, delete your files, or chain background actions.</p>
+        </article>
+        <article>
+          <h3>Not a file sync system</h3>
+          <p>Chauncy is not a backup tool, not a file synchronizer, and not a replacement for your file system. Your files live where you put them. Chauncy indexes what you ingest.</p>
+        </article>
+        <article>
+          <h3>Not a knowledge graph builder</h3>
+          <p>Chauncy doesn't ask you to tag, backlink, or organize. The connections it surfaces come from the meaning of what you've written, not from a graph you maintain.</p>
+        </article>
+        <article>
+          <h3>Not multi-library at launch</h3>
+          <p>Chauncy supports one collection per installation. Many ingestion sources, one searchable library. Multiple libraries or projects are not in the launch build.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">Requirements</p>
+        <h2>Windows 10 or 11, x64.</h2>
+        <p>Chauncy ships as a Windows desktop application. The installer handles required components where they're not already present.</p>
+      </div>
+      <div class="requirements-card">
+        <h3>Practical requirements</h3>
+        <ul>
+          <li>Windows 10 or 11, 64-bit</li>
+          <li>4 GB RAM minimum; 8 GB recommended for comfort with larger collections</li>
+          <li>Roughly 1 GB free disk for the application and runtime, plus space for your indexed content as it grows</li>
+          <li>No GPU required</li>
+        </ul>
+      </div>
+      <div class="detail-grid two">
+        <article>
+          <h3>Updates</h3>
+          <p>Updates are released as new installers. Auto-update is not in the current build — when a new version is available, download and install from the Chauncy website.</p>
+        </article>
+        <article>
+          <h3>macOS</h3>
+          <p>macOS support is in development. A waitlist is open in the site footer.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container feature-section">
+      <div class="feature-intro">
+        <p class="eyebrow">On the roadmap</p>
+        <h2>What we're working on next.</h2>
+        <p>Chauncy is actively developed by a small team. A few capabilities not in the current build that we're working on:</p>
+      </div>
+      <div class="roadmap-list">
+        <span>Browser extension for one-click web page capture</span>
+        <span>OCR for image-based PDFs</span>
+        <span>macOS build</span>
+      </div>
+      <p class="section-note">We don't pre-announce dates, but these are the priorities the team is working through.</p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container cta-block">
+      <p class="eyebrow">Ready when you are</p>
+      <h2>$99. One-time purchase. Windows installer.</h2>
+      <a href="/pricing" class="btn btn-primary">Buy Chauncy for Windows - $99</a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .features-hero {
+    padding-top: 5rem;
+  }
+
+  .narrow,
+  .feature-section {
+    max-width: 980px;
+  }
+
+  .features-hero h1 {
+    margin-top: 0.8rem;
+  }
+
+  .page-sub,
+  .feature-intro p,
+  .section-note {
+    margin-top: 1rem;
+    color: var(--color-text-muted);
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .feature-intro {
+    max-width: 820px;
+    margin-bottom: 2rem;
+  }
+
+  .detail-grid,
+  .provider-grid,
+  .callout-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-grid.two,
+  .callout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .provider-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  article,
+  .requirements-card {
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-surface);
+  }
+
+  article p,
+  article li,
+  .requirements-card li {
+    margin-top: 0.55rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+
+  article ul,
+  .requirements-card ul {
+    margin-top: 0.85rem;
+    padding-left: 1.2rem;
+  }
+
+  code {
+    padding: 0.1rem 0.3rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-primary-hover);
+  }
+
+  .callout-grid,
+  .requirements-card,
+  .roadmap-list {
+    margin-top: 1rem;
+  }
+
+  .roadmap-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .roadmap-list span {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .cta-block {
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .cta-block .btn {
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    .provider-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .detail-grid,
+    .detail-grid.two,
+    .provider-grid,
+    .callout-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

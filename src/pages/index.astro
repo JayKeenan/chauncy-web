@@ -46,7 +46,6 @@ import Base from '../layouts/Base.astro';
                   <p>The high-contrast pattern disrupts motion detection in biting flies and disorients group predators when zebras gather in herds.</p>
                   <p class="mock-callout">The word "camouflage" does not appear in this article.</p>
                 </div>
-                <span>89%</span>
               </div>
             </div>
 
@@ -59,7 +58,6 @@ import Base from '../layouts/Base.astro';
                   <p>...the trick isn't winning the argument. It's making sure they walk out still wanting to talk to you next month...</p>
                   <p class="mock-callout">No words in common with the query. Chauncy matched the topic.</p>
                 </div>
-                <span>84%</span>
               </div>
             </div>
           </div>
@@ -121,7 +119,7 @@ import Base from '../layouts/Base.astro';
         <div class="workflow-step">
           <span>01</span>
           <h3>Curate</h3>
-          <p>Decide what's worth keeping. Add PDFs, email, Markdown, Word, PowerPoint, HTML, web URLs, notes, and voice notes — files already on your machine, or new material as you encounter it.</p>
+          <p>Decide what's worth keeping. Add PDFs, email, Markdown, Word, PowerPoint, HTML, web URLs, and notes — files already on your machine, or new material as you encounter it.</p>
         </div>
         <div class="workflow-step">
           <span>02</span>
@@ -155,15 +153,15 @@ import Base from '../layouts/Base.astro';
         </div>
         <div>
           <h3>Email</h3>
-          <p>Forward messages to a dedicated folder, or drop saved emails into a watch folder. Chauncy ingests them like any other document.</p>
+          <p>Forward selected messages to a dedicated folder, drop saved emails into a watch folder, or ingest directly from an IMAP mailbox you configure.</p>
         </div>
         <div>
           <h3>Web pages</h3>
           <p>Paste a URL and Chauncy fetches and indexes the page. A browser extension for one-click capture is in development.</p>
         </div>
         <div>
-          <h3>Voice notes</h3>
-          <p>Add audio files. Chauncy transcribes them and indexes the text.</p>
+          <h3>Voice input</h3>
+          <p>Dictate search queries and notes directly into Chauncy using your machine's voice recognition.</p>
         </div>
       </div>
       <p class="section-note">Ingestion is always your choice. Chauncy doesn't scan your drive or pull from the cloud without you asking it to.</p>
@@ -174,23 +172,15 @@ import Base from '../layouts/Base.astro';
     <div class="container">
       <div class="section-intro">
         <p class="eyebrow">AI on your terms</p>
-        <h2>Three modes. No lock-in.</h2>
+        <h2>Search works without AI. Add AI when you want it.</h2>
+        <p>Chauncy's semantic search runs locally — no AI provider needed, nothing leaving your machine. When you want AI to summarize, draft, or answer questions across your sources, turn synthesis on and connect a provider.</p>
       </div>
-      <div class="mode-grid">
-        <div class="mode-card">
-          <h3>Search only</h3>
-          <p>No AI, no setup, nothing leaves your machine. Semantic search runs locally out of the box.</p>
-        </div>
-        <div class="mode-card">
-          <h3>Cloud AI</h3>
-          <p>Add synthesis from a provider you already trust. Bring your own API key, pay the provider directly, switch any time. Your files stay on your machine — only the excerpt you ask about leaves, and only when you initiate the request.</p>
-        </div>
-        <div class="mode-card">
-          <h3>Local AI</h3>
-          <p>Run a model on your own hardware. No keys, no recurring costs, nothing leaving the machine. You supply the model.</p>
-        </div>
+      <div class="provider-list">
+        <span>Anthropic or OpenAI with your own API key</span>
+        <span>Ollama running on your own hardware</span>
+        <span>Any OpenAI-compatible endpoint you configure</span>
       </div>
-      <p class="section-note">Switch modes any time. The capability you don't use costs you nothing.</p>
+      <p class="section-note">Switch providers any time. Your files stay on your machine — only the excerpt you ask about leaves, and only when you initiate the request.</p>
     </div>
   </section>
 
@@ -452,6 +442,22 @@ import Base from '../layouts/Base.astro';
   .safety-cards,
   .feature-list,
   .workflow-grid,
+  .provider-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+
+  .provider-list span {
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
   .mode-grid {
     display: grid;
     gap: 1rem;
