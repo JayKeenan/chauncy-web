@@ -6,7 +6,7 @@ description: Terms of Service for Chauncy desktop application.
 
 # Chauncy Terms of Service
 
-*Last updated: March 2026*
+*Last updated: May 2026*
 
 ---
 
@@ -36,7 +36,7 @@ Your documents and data belong to you. Chauncy does not claim any rights over co
 
 ## 5. User Curation and Output
 
-Chauncy retrieves, connects, and summarizes material to help you work with your own archive. You are responsible for reviewing source material, evaluating relevance and accuracy, and deciding how to use any results, annotations, or AI-assisted synthesis.
+Chauncy retrieves and connects material to help you work with the documents you have chosen to keep. When you enable optional AI synthesis, Chauncy can also summarize or draft based on those documents through a provider you have selected. You are responsible for reviewing source material, evaluating relevance and accuracy, and deciding how to use any results, annotations, or AI-assisted synthesis.
 
 Chauncy is not an autonomous agent and should not be treated as one. It does not make decisions, operate accounts, or take external actions on your behalf.
 
