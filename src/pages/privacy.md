@@ -49,7 +49,7 @@ When you explicitly use an AI feature, Chauncy sends relevant excerpts from your
 
 Chauncy is transparent about when AI features are active. You are in control of which provider you use and when AI features are invoked.
 
-If you require fully local AI processing, Chauncy supports configuration of a local model endpoint (e.g., LM Studio). In that case, no data leaves your machine for AI processing.
+If you require fully local AI processing, Chauncy supports configuration of a local model endpoint such as Ollama or LM Studio. In that case, no data leaves your machine for AI processing.
 
 ---
 

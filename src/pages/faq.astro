@@ -26,8 +26,8 @@ import Base from '../layouts/Base.astro';
         </details>
 
         <details>
-          <summary>Wait — Chauncy opens in my browser. Is it a web app?</summary>
-          <p>No. Chauncy is a desktop application. It uses your browser as its interface for technical reasons, but it runs entirely on your computer. No data is sent to any Chauncy server. There is no Chauncy server.</p>
+          <summary>Is Chauncy a web app?</summary>
+          <p>No. Chauncy is a desktop application. It runs locally on your computer and does not send your archive to a Chauncy server. There is no Chauncy cloud account and no Chauncy document server.</p>
         </details>
 
         <details>
@@ -47,7 +47,12 @@ import Base from '../layouts/Base.astro';
 
         <details>
           <summary>Which AI providers does Chauncy support?</summary>
-          <p>OpenAI, Anthropic, Groq, and any provider with a compatible API endpoint. If you run a local model via LM Studio or a similar tool, you can point Chauncy at it using the custom endpoint setting.</p>
+          <p>OpenAI, Anthropic, Groq, and compatible custom endpoints. Chauncy can also use local LLMs through tools like Ollama or LM Studio when you point Chauncy at their local API endpoint.</p>
+        </details>
+
+        <details>
+          <summary>Can I use Chauncy with Ollama or another local LLM?</summary>
+          <p>Yes. If you run Ollama, LM Studio, or another compatible local model server, Chauncy can connect to that local endpoint. In that setup, AI requests are handled on your machine instead of being sent to a cloud AI provider.</p>
         </details>
 
         <details>
