@@ -13,3 +13,6 @@ LAUNCH-PLAN (3).md
 /*.jpeg
 /*.zip
 /preview*.log
+
+# Local release binaries (do not commit)
+release-assets/

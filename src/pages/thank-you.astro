@@ -1,30 +1,41 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const windowsDownloadUrl = 'https://github.com/JayKeenan/chauncy-app/releases/latest/download/Chauncy_0.1.0_x64-setup.exe';
+const windowsDownloadUrl = 'https://github.com/JayKeenan/chauncy-web/releases/download/v0.1.0/Chauncy_0.1.0_x64-setup.exe';
+const sha256 = 'FCA18F6E356DE7AA46CDAE650BFA80EF64D85CCB7F09FDB8A0761DD05DA6F70A';
 ---
 
-<Base title="Download Chauncy for Windows" description="Download the Chauncy 0.1.0 Windows installer and verify the release checksum.">
+<Base title="Download Chauncy for Windows" description="Download the Chauncy Windows installer and verify the release checksum.">
 
   <section class="section">
     <div class="container ty-container">
-      <p class="eyebrow">Windows installer ready</p>
+      <p class="eyebrow">Thanks for your purchase</p>
       <h1>Download Chauncy for Windows.</h1>
       <p class="ty-sub">
-        This page is reserved for post-purchase delivery. Download the signed Windows installer below, then keep the checksum for verification if needed.
+        Your receipt is handled by Stripe. Download the Windows installer below, then follow the short setup guide.
       </p>
 
-      <a class="btn btn-primary download-btn" href={windowsDownloadUrl}>Download Chauncy 0.1.0 for Windows</a>
+      <a class="btn btn-primary download-btn" href={windowsDownloadUrl}>Download Chauncy for Windows</a>
 
       <div class="status-card">
         <h2>Release details</h2>
         <ul>
-          <li>Windows installer: hosted on the latest Chauncy app release</li>
+          <li>Hosted on the Chauncy GitHub release</li>
           <li>Installer filename: Chauncy_0.1.0_x64-setup.exe</li>
-          <li>SHA-256: 0B6B50F1E427183FA4FAC23EA9ABFC37BE54E3660230D5BCEBF2FD661C6B1DD6</li>
-          <li>Version: 0.1.0</li>
-          <li>Platform: Windows x64</li>
+          <li>SHA-256: {sha256}</li>
+          <li>Build: Windows Launch (0.1.0)</li>
+          <li>Platform: Windows 10/11, x64</li>
         </ul>
+      </div>
+
+      <div class="setup-note">
+        <h2>Get started in four steps</h2>
+        <ol class="steps">
+          <li><strong>Install.</strong> Run the installer. Requires Windows 10 or 11, 64-bit.</li>
+          <li><strong>Add material.</strong> Point Chauncy at a folder of PDFs, notes, email files, or paste a few URLs you care about.</li>
+          <li><strong>Ask.</strong> Search in plain English — try a question where you remember the idea, not the filename.</li>
+          <li><strong>Optional AI.</strong> Core search works offline. In Settings, connect Anthropic, OpenAI, Ollama, or another endpoint only if you want synthesis.</li>
+        </ol>
       </div>
 
       <div class="setup-note">
@@ -32,7 +43,7 @@ const windowsDownloadUrl = 'https://github.com/JayKeenan/chauncy-app/releases/la
       </div>
 
       <div class="help-note">
-        <p>Need help with installation? Email <a href="mailto:support@chauncy.dev">support@chauncy.dev</a>.</p>
+        <p>Need help with installation? Email <a href="mailto:support@chauncy.dev">support@chauncy.dev</a>. 14-day money-back guarantee — see the <a href="/returns">return policy</a>.</p>
       </div>
     </div>
   </section>
@@ -77,6 +88,20 @@ const windowsDownloadUrl = 'https://github.com/JayKeenan/chauncy-app/releases/la
     gap: 0.6rem;
   }
 
+  .steps {
+    margin-top: 1rem;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+  }
+
+  .steps strong {
+    color: var(--color-text);
+  }
+
   .status-card li,
   .setup-note p,
   .help-note p {
@@ -88,5 +113,9 @@ const windowsDownloadUrl = 'https://github.com/JayKeenan/chauncy-app/releases/la
   .status-card li::before {
     content: '• ';
     color: var(--color-primary);
+  }
+
+  .setup-note h2 {
+    font-size: 1.15rem;
   }
 </style>

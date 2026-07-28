@@ -212,11 +212,12 @@ These are not features and will not be added:
 
 ## Pricing and Distribution
 
-- **Price:** $129 one-time purchase / $89 launch discount for first 100 licenses
+- **Price:** $149 one-time purchase / $99 launch discount for first 100 licenses
 - **Guarantee:** 14-day money-back
 - **Payment:** Stripe Payment Links
-- **Download delivery:** GitHub Releases, linked from purchase confirmation page
-- **No license key** at launch
+- **Download delivery:** GitHub Releases on `JayKeenan/chauncy-web` (v0.1.0), linked from `/thank-you`
+- **SHA-256:** `FCA18F6E356DE7AA46CDAE650BFA80EF64D85CCB7F09FDB8A0761DD05DA6F70A`
+- **No license key** at launch (trust + 14-day refund; download page is post-purchase destination)
 - **No SaaS** — one-time purchase, no subscription
 
 ---

@@ -72,6 +72,71 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
+  <section class="section">
+    <div class="container screenshot-section">
+      <div class="section-intro">
+        <p class="eyebrow">The real product</p>
+        <h2>Windows workspace, ready to search.</h2>
+        <p>Chauncy runs as a desktop app on your machine. Here is the workspace after material is in the library.</p>
+      </div>
+      <figure class="product-shot">
+        <img src="/images/chauncy-workspace.png" alt="Chauncy desktop workspace showing search and document results" width="1732" height="987" loading="lazy" />
+      </figure>
+    </div>
+  </section>
+
+  <section id="who-for" class="section-alt">
+    <div class="container who-grid">
+      <div>
+        <p class="eyebrow">Fit check</p>
+        <h2>Who Chauncy is for — and who it is not.</h2>
+      </div>
+      <div class="who-cards">
+        <div class="who-card yes">
+          <h3>Built for</h3>
+          <ul>
+            <li>Researchers, writers, consultants, and analysts with large personal archives</li>
+            <li>People who remember the point of a document, not the filename</li>
+            <li>Anyone who wants meaning-based search without building a knowledge graph by hand</li>
+            <li>Users who want local-first storage and optional bring-your-own AI</li>
+          </ul>
+        </div>
+        <div class="who-card no">
+          <h3>Not built for</h3>
+          <ul>
+            <li>HIPAA, attorney-client privilege, or other compliance-regulated environments</li>
+            <li>Teams that need multi-user sharing or cloud sync today</li>
+            <li>People looking for an autonomous agent that acts on their behalf</li>
+            <li>Mac users at launch — join the <a href="/waitlist">waitlist</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare" class="section">
+    <div class="container">
+      <div class="section-intro">
+        <p class="eyebrow">How it fits</p>
+        <h2>Different job than notes apps, desktop search, or chatbots.</h2>
+      </div>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3>vs note / PKM tools</h3>
+          <p>Obsidian-style tools ask you to tag, backlink, and maintain structure. Chauncy infers connections from meaning so the work is reading and writing, not gardening a graph.</p>
+        </div>
+        <div class="compare-card">
+          <h3>vs desktop search</h3>
+          <p>Spotlight and Everything match keywords and filenames. Chauncy matches meaning — a query can surface a document that shares no words with your search.</p>
+        </div>
+        <div class="compare-card">
+          <h3>vs uploading to a chatbot</h3>
+          <p>Chat tools need re-upload theater and live in the cloud. Chauncy indexes a local archive once, searches offline, and only sends excerpts if you turn AI on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="safety" class="section-alt">
     <div class="container safety-grid">
       <div>
@@ -211,7 +276,7 @@ import Base from '../layouts/Base.astro';
     <div class="container cta-block">
       <p class="eyebrow">Windows installer is ready</p>
       <h2>Windows launch pricing.</h2>
-      <p>One-time purchase: $99. Buy through Stripe, download the installer immediately, license tied to your email.</p>
+      <p>One-time purchase: $99. Buy through Stripe and download the Windows installer immediately. No account required.</p>
       <a href="/pricing" class="btn btn-primary">Buy Chauncy for Windows - $99</a>
     </div>
   </section>
@@ -536,10 +601,86 @@ import Base from '../layouts/Base.astro';
     margin-top: 1.5rem;
   }
 
+  .screenshot-section .section-intro {
+    margin-bottom: 1.5rem;
+  }
+
+  .product-shot {
+    margin: 0;
+    border: 1px solid var(--color-border-bright);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: #050505;
+  }
+
+  .product-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .who-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .who-cards,
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .compare-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .who-card,
+  .compare-card {
+    padding: 1.35rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-surface);
+  }
+
+  .who-card h3,
+  .compare-card h3 {
+    margin-bottom: 0.85rem;
+  }
+
+  .who-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .who-card li,
+  .compare-card p {
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+
+  .who-card.yes li::before {
+    content: '✓ ';
+    color: var(--color-success);
+    font-weight: 700;
+  }
+
+  .who-card.no li::before {
+    content: '× ';
+    color: var(--color-warning);
+    font-weight: 700;
+  }
+
   @media (max-width: 1000px) {
     .hero-grid,
     .safety-grid,
-    .feature-split {
+    .feature-split,
+    .who-cards,
+    .compare-grid {
       grid-template-columns: 1fr;
     }
 

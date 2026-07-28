@@ -52,7 +52,9 @@
 | 2026-03-05 | No SaaS — desktop app only | Distribution via Chauncy.dev |
 | 2026-03-05 | Stripe or equivalent for payment | Specific approach TBD at Step 5 |
 | 2026-03-05 | LAUNCH-PLAN.md lives in web repo root | CC maintains, both partners update |
-| 2026-03-05 | Pricing: $129 one-time, $89 launch discount for first 100 licenses | 14-day money-back guarantee |
+| 2026-03-05 | Pricing: $129 one-time, $89 launch discount for first 100 licenses | Superseded 2026-07-28 |
+| 2026-07-28 | Pricing: $149 one-time, $99 launch for first 100 licenses | Live on chauncy.dev; 14-day money-back |
+| 2026-07-28 | Installer published on GitHub Releases | `JayKeenan/chauncy-web` tag `v0.1.0` |
 | 2026-03-05 | macOS: top billing alongside Windows, listed as coming soon / in beta testing | Waitlist capture for Mac users; CC to prioritize testing |
 | 2026-03-05 | Target audience: researchers, writers, consultants, analysts, students | Explicitly NOT compliance-regulated users (HIPAA, legal privilege, federal grant) |
 | 2026-03-05 | Compliance carve-out language required | FAQ/privacy section must state Chauncy is not designed for regulated environments |
