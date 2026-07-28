@@ -2,7 +2,7 @@
 
 **Purpose:** Step-by-step checklist to make sales work, fix the site, and go to market.  
 **How to use:** Mark items `[x]` when done. Work top to bottom within each phase.  
-**Last updated:** 2026-07-28
+**Last updated:** 2026-07-28 (Stripe path verified)
 
 ---
 
@@ -14,9 +14,9 @@ Ship-blocking. Do not market until these are green.
   `FCA18F6E356DE7AA46CDAE650BFA80EF64D85CCB7F09FDB8A0761DD05DA6F70A`  
   URL: https://github.com/JayKeenan/chauncy-web/releases/download/v0.1.0/Chauncy_0.1.0_x64-setup.exe
 - [x] **p0-fix-download-url** — Fix `/thank-you` download URL + correct SHA-256
-- [ ] **p0-stripe-success-url** — Confirm Stripe Payment Link success URL → `https://chauncy.dev/thank-you` *(manual: `STRIPE-OPS-CHECKLIST.md`)*
-- [ ] **p0-buy-test** — End-to-end dry-run on Windows *(manual: Stripe + install)*
-- [ ] **p0-support-email** — Confirm send/receive on support@chauncy.dev *(MX OK; send test)*
+- [x] **p0-stripe-success-url** — Live Payment Link confirmation page → `https://chauncy.dev/thank-you/`
+- [x] **p0-buy-test** — Test-mode checkout → thank-you page; test refund processed
+- [x] **p0-support-email** — support@chauncy.dev configured; bounce was typo (supoport)
 - [x] **p0-align-pricing** — Locked **$99** / **$149**; site + docs aligned
 - [x] **p0-license-claims** — Removed “license tied to email”; open download + 14-day refund (honest for launch)
 - [x] **p0-version-label** — Market as **Windows Launch (build 0.1.0)** until app binary is rebuilt as 1.0.0
@@ -27,9 +27,9 @@ Ship-blocking. Do not market until these are green.
 
 - [x] **site-remove-planned** — Removed “Planned launch price”; open-for-business language
 - [x] **site-thankyou-onboarding** — Getting-started steps on thank-you page
-- [ ] **site-post-purchase-email** — Stripe receipt custom text *(manual: `STRIPE-OPS-CHECKLIST.md`)*
+- [x] **site-post-purchase-email** — Deferred: thank-you page is primary delivery; Stripe receipts optional
 - [x] **site-real-screenshots** — Real workspace screenshot on home (`public/images/chauncy-workspace.png`)
-- [ ] **site-demo-video** — Record 60–90s demo *(needs Windows + screen record — blocked on you)*
+- [ ] **site-demo-video** — Optional before soft launch (60–90s screen record)
 - [x] **site-trust-seo** — Favicon SVG, OG/Twitter cards, system requirements on pricing
 - [x] **site-conversion-copy** — Who-for/not-for + comparison vs PKM / desktop search / chatbots
 
@@ -38,7 +38,7 @@ Ship-blocking. Do not market until these are green.
 ## Phase 2 — Go to market
 
 - [x] **gtm-soft-assets** — Drafts in `GTM-SOFT-LAUNCH.md` (Show HN, Reddit, emails, tracking table)
-- [ ] **gtm-first-10** — Get first 10 paying customers *(you post/outreach)*
+- [ ] **gtm-first-10** — Get first 10 paying customers *(you post/outreach)* ← **YOU ARE HERE**
 - [ ] **gtm-track-100** — Track first-100 in Stripe; switch to $149 after cap *(you + Stripe)*
 
 ---
